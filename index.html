@@ -1169,61 +1169,71 @@
 
 <!-- Contact Section -->
 <section id="contact" class="fade-in">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>Let's Connect</h3>
-            <p>I'm actively looking for opportunities where I can apply my engineering problem-solving skills.</p><br>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>blyanafernandes@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 9175850459</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Pune, India</span>
-                </div>
-            </div>
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <p>I'm actively looking for opportunities where I can apply my engineering problem-solving skills.</p><br>
+      <div class="contact-details">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>blyanafernandes@gmail.com</span>
         </div>
-
-        <!-- CONTACT FORM -->
-        <div class="contact-form">
-            <form action="https://formsubmit.co/blyanafernandes@gmail.com" method="POST">
-                <!-- Hidden Fields -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://github.com/BlaynaFerns/MyPortfolio/blob/main/thankyou.html">
-                <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I’ll get back to you soon.">
-
-                <!-- Visible Fields -->
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" class="form-control" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="form-control" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 9175850459</span>
         </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Pune, India</span>
+        </div>
+      </div>
     </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <form id="contact-form"
+            action="https://formsubmit.co/blyanafernandes@gmail.com"
+            method="POST"
+            onsubmit="return handleFormSubmit(event)">
+        
+        <!-- Hidden Fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I’ll get back to you soon.">
+        <!-- (No _next because we stay on the same page) -->
+
+        <!-- Visible Fields -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <!-- Thank You Message (hidden by default) -->
+      <div id="thank-you" style="display:none; margin-top:1rem; color:green; font-weight:600;">
+        ✅ Thank you for your message!
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
     <!-- Footer -->
